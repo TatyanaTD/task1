@@ -6,22 +6,23 @@ let money = prompt("Ваш бюджет на месяц?"),
 var appData = {
     allMoney: money,
     timeData: time,
-    expensesAll: expenses,
-    optionalExpensesAll: optionalExpenses,
-    incomeAll: income,
-    savingsAll: saving
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
+    savings: false
 };
 
-var moneyInMonth1 = prompt("Введите обязательную статью расходов в этом месяце"),
-    moneyInMonth2 = prompt("Во сколько обойдется?");
+var inMonth1 = prompt("Введите обязательную статью расходов в этом месяце"),
+    inMonth2 = prompt("Во сколько обойдется?"),
+    inMonth3 = prompt("Введите обязательную статью расходов в этом месяце"),
+    inMonth4 = prompt("Во сколько обойдется?");
 
-var expenses = {moneyInMonth1, moneyInMonth2};
-var optionalExpenses = {};
-var income = [];
-var saving = false;
+appData.expenses.inMonth1 = inMonth2;
+appData.expenses.inMonth3 = inMonth4;
 
-var moneyDay = ((money-moneyInMonth2)/30);
-alert (moneyDay);
+alert(appData.budget/30);
+
+
 
 
     
