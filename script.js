@@ -104,16 +104,22 @@ function checkSavings() {
 }
 
 checkSavings();
+
 let optionalExpenses = {};
 
 function chooseOptExpenses() {
-let n = 1,
+let n = 1;
 
-while (n < 3) {
-    let с = prompt("Статья необязательных расходов?");
-    optionalExpenses
+while (n < 4 ) {
+    let c = +prompt("Статья необязательных расходов?");
+    optionalExpenses[n] = c;
+    n++;
+        if ((c == '') || (typeof(с) == null) || (typeof(с) == 'string') ){
+            n--;
+        }
+    }
 }
 
-}
+chooseOptExpenses();
 
-    
+   
